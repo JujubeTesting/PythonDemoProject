@@ -6,6 +6,7 @@ class GetDriverInstance:
         try:
             self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
             self.driver.get(urlLink)
+            self.driver.implicitly_wait(20)
             print("## successfully navigated to URL")
             print("\n")
             self.driver.maximize_window()
